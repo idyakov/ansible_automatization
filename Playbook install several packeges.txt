@@ -1,0 +1,20 @@
+---
+- name: Loops Playbook
+  hosts: an2
+  become: yes
+
+  tasks:
+  - name: Say Hello to All
+    debug: msg="Hello {{ item }}"
+    loop:
+        - "Vasya"
+        - "Masha"
+        - "Petya"
+        - "Olya"
+
+
+  - name: Install many packeges
+    yum: name={{ item }} state=installed
+    loop:
+       - vim
+       - mysql

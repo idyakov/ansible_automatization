@@ -1,0 +1,13 @@
+---
+- name: Loops Playbook
+  hosts: an3
+  become: yes
+
+  tasks:
+  - name: Say Hello to All
+    debug: msg="Hello {{ item }}"
+    with_items:
+        - "Vasya"
+        - "Masha"
+        - "Petya"
+        - "Olya"

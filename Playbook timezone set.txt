@@ -1,0 +1,8 @@
+---
+- name: Set Timezone
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Set PST timezone
+    timezone: name=America/Los_Angeles
