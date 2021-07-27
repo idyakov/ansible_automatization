@@ -4,10 +4,10 @@
   become: yes
 
   tasks:
-  - name: Say Hello to All
-    debug: msg="Hello {{ item }}"
+  - name: ipv4 interaface
+    debug: msg="interface {{ item }}"
     with_items:
-        - "Vasya"
-        - "Masha"
-        - "Petya"
-        - "Olya"
+        - "10.10.20.0/24"
+        - "10.10.30.0/24"
+        - "10.10.40.0/24"
+        - "10.10.50.0/24"
